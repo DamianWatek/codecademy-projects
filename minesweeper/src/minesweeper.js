@@ -1,21 +1,4 @@
 
-// PART II 
-
-/*const board = [
-	[' ', ' ', ' '], 
-	[' ', ' ', ' '], 
-	[' ', ' ', ' ']
-];*/
-
-
-/*printBoard(board);
-
-board[0][1] = '1';
-board[2][2] = 'B';
-
-printBoard(board);*/
-
-
 /* PART III */
 
 // Fukncja generowania planszy do gry
@@ -52,12 +35,64 @@ const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs) => {
 		
 		let randomRowIndex = Math.floor(Math.random() * numberOfRows);
 		let randomColumnIndex = Math.floor(Math.random() * numberOfColumns);
-		board[randomRowIndex][randomColumnIndex] = 'B';
-		numberOfBombsPlaced++
-		// After Control flow fix potential bomb in the same place
+		
+		if (board[randomRowIndex][randomColumnIndex] !== 'B') {
+			
+			board[randomRowIndex][randomColumnIndex] = 'B';
+			numberOfBombsPlaced++;
+			
+		}
 	}
 		
 	return board;
+};
+
+// Funkcja generujaca liczbe bomb obok
+const getNumberOfNeighborBombs = (bombBoard, rowIndex, columnIndex) => {
+	
+	const neighborOffsets = [
+		[0, 1],
+		[1, 1],
+		[1, 0],
+		[1, -1],
+		[0, -1],
+		[-1, -1],
+		[-1, 0],
+		[-1, 1]
+	];
+	const numberOfRows = bombBoard.length;
+	const numberOfColumns = bombBoard[0].length;
+	let numberOfBombs = 0;
+	
+	neighborOffsets.forEach(offset => {
+		const neighborRowIndex = rowIndex + offset[0];
+		const neighborColumnIndex = columnIndex + offset[1];
+		
+		if (neighborRowIndex >= 0 && neighborRowIndex < numberOfRows && neighborColumnIndex >= 0 && neighborColumnIndex < numberOfColumns) {
+			if (bombBoard[neighborRowIndex][neighborColumnIndex] == 'B') {
+				numberOfBombs++							 
+			};					 
+		};
+	});
+	return numberOfBombs;
+};
+
+// Funkcja pokazująca plansze po odkryciu
+const flipTile = (playerBoard, bombBoard, rowIndex, columnIndex) => {
+	// Jeśli miejsce na planszy gracza jest puste zwraca tekst
+	if (playerBoard[rowIndex][columnIndex] !== ' ') { 
+		
+		return 'This tile has already been flipped!';
+	// Jeśli na planszy bomb jest B zwraca B na plansze gracza	
+	} else if (bombBoard[rowIndex][columnIndex] === 'B') {
+		
+		playerBoard[rowIndex][columnIndex] = 'B';
+
+	} else {
+		
+		playerBoard[rowIndex][columnIndex] = getNumberOfNeighborBombs(bombBoard, rowIndex, columnIndex);
+		
+	}
 };
 
 // Rysowanie poprawnej planszy do gry 
@@ -68,14 +103,18 @@ const printBoard = board => {
 };
 
 
-let playerBoard = generatePlayerBoard(3,4);
-let bombBoard = generateBombBoard(3,4,5);
+const playerBoard = generatePlayerBoard(3, 3);
+const bombBoard = generateBombBoard(3, 3, 4);
 
 console.log('Player Board: '); 
-console.log(printBoard(playerBoard));
+printBoard(playerBoard);
 
 console.log('Bomb Board: '); 
-console.log(printBoard(bombBoard));
+printBoard(bombBoard);
+flipTile(playerBoard, bombBoard, 1, 1);
+
+console.log('Updated Player Board: '); 
+console.log(printBoard(playerBoard));
 
 
 
