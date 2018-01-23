@@ -7,14 +7,14 @@ class Game {
     playMove(rowIndex, columnIndex) {
         this._board.flipTile(rowIndex, columnIndex);
         
-        // Jeśli na planszy bomb jest B zwraca B na plansze gracza	
         if (this._board.playerBoard[rowIndex][columnIndex] === 'B') { 
             console.log( 'Game Over! Final Board:');
             this._board.print();
-        } else if (this._board.playerBoard[rowIndex][columnIndex] === ' ') {
-            this._board.playerBoard[rowIndex][columnIndex] = this.getNumberOfNeighborBombs(rowIndex, columnIndex);
-        } else {
+        } else if (this._board.hasSafeTiles()) {
             console.log('Current Board:');
+			this._board.print();
+        } else {
+            console.log('Wygrana');
             this._board.print();
         };
         
@@ -65,7 +65,7 @@ class Board {
         this._numberOfColumns = this._bombBoard[0].length;
         this._numberOfBombs = 0;
 
-        neighborOffsets.forEach = function(offset) { 
+        neighborOffsets.forEach(offset => {
             const neighborRowIndex = rowIndex + offset[0];
             const neighborColumnIndex = columnIndex + offset[1];
 
@@ -74,7 +74,7 @@ class Board {
                     this._numberOfBombs++							 
                 };					 
             };
-        };
+		});
         return this._numberOfBombs;
     }
     // Metoda mowiaca o wygranej grze
@@ -83,10 +83,8 @@ class Board {
     }
     // Rysowanie poprawnej planszy do gry 
     print() {
-        /*this._board.map() = function(row) {
-            console.log(row.join(' | ')).join('\n');
-        }*/
-        console.log(this._board.map(row => row.join(' | ')).join('\n'));
+        
+        console.log(this._playerBoard.map(row => row.join(' | ')).join('\n'));
 
     };
     // Fukncja generowania planszy do gry
@@ -135,10 +133,10 @@ class Board {
     };
 };
 
-
-
 const g = new Game(3, 3, 3);
-g.playMove(0,0);
+g.playMove(1,1);
+
+
 
 
 
