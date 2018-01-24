@@ -1,0 +1,16 @@
+{
+  "name": "minesweeper",
+  "version": "1.0.0",
+  "description": "Minesweeper game",
+  "main": "game.js",
+  "scripts": {
+    "test": "It's test command line",
+	 "build": "babel src -d lib"
+  },
+  "author": "Damian Watroba",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}

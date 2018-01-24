@@ -1,14 +1,9 @@
-                                                    /* PART IV */
+"use strict";
 
+/* PART IV */
 
-
-const g = new Game(3, 3, 3);
-g.playMove(1,1);
-
-
-
-
-
+var g = new Game(3, 3, 3);
+g.playMove(1, 1);
 
 /*
 const playerBoard = generatePlayerBoard(3, 3);
@@ -24,18 +19,3 @@ flipTile(playerBoard, bombBoard, 1, 1);
 console.log('Updated Player Board: '); 
 console.log(printBoard(playerBoard));
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
