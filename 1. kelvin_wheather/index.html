@@ -7,11 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Damian Watroba" />
-    <script src="js/script.js"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-			
+    <div class="app">
+        <h1>What is the Kelvin temperature today?</h1>
+        <form>
+            <input class="inputVal" type="number" id="temp" value="0">
+            <input class="inputSub" type="submit" id="get-value" value="Submit" >
+        </form>
+        <div class="result" id="result-celsius"></div>
+        <div class="result" id="result-fahrenheit"></div>
+    </div>
+<script src="js/script.js"></script>	
 </body>
+
 </html>
