@@ -1,0 +1,22 @@
+body {
+    box-sizing: border-box;
+    background-color: #E4F1FE;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.app {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 50px;
+}
+.input {
+    font-size: 1em;
+    padding: 20px;
+    border: none;
+}
+.input-sub {
+    background-color: #446CB3;
+}
+.result {
+    margin: 40px;
+}
