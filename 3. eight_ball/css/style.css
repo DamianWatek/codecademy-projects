@@ -1,0 +1,43 @@
+body {
+    box-sizing: border-box;
+    background-color: #E4F1FE;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.app {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 50px;
+}
+h1 {
+    margin: 10px;
+}
+.greeting {
+    margin: 15px;
+}
+
+form {
+    position: relative;
+}
+.input {
+    font-size: 1em;
+    padding: 1.1em;
+    border: none;
+    outline: none;
+    min-width: inherit;
+}
+.input-question {
+    width: 400px;
+    height: 150px;
+    border-bottom: 1px solid #446CB3;
+}
+.input-sub {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0.5em;
+    background-color: #446CB3;
+}
+.result {
+    margin: 40px;
+}

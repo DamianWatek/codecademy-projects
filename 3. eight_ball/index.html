@@ -7,11 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Damian Watroba" />
-    <script src="js/script.js"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-			
+    <div class="app">
+        <h1>8 ball</h1>
+        <div class="greeting" id="hello"></div>
+        <form>
+            <textarea class="input input-question" type="text" id="inputQuestion" Placeholder="Your question" maxlength="160"></textarea>
+            <input class="input input-sub" type="submit" id="get-value" value="Submit" >
+        </form>
+        <div class="result" id="answer"></div>
+    </div>
+    <div id="prompt">
+        
+    </div>
+<script src="js/script.js"></script>	
 </body>
+
 </html>
