@@ -1,10 +1,12 @@
 // User chocie 
 const getUserChoice = userInput => {
+    
+  userInput = prompt('Chose: Rock || Paper || Scissors');
   userInput.toLowerCase();
 	if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
     return userInput;
   } else {
-    console.log('Error message! Please choice Rock, Paper or Scissors');
+    alert('Error message! Please choice Rock, Paper or Scissors');
   }
 };
 // Computer chocie 
@@ -29,35 +31,34 @@ const determineWinner = (userChoice, computerChoice) => {
   	return 'tie, play again!'
   } else if (userChoice === 'rock') {
     if (computerChoice === 'paper') {
-      return 'The computer won!';
+      return ' The computer won!';
     } else {
-      return 'You won!';
+      return ' You won!';
     }
   } else if (userChoice === 'paper') {
     if (computerChoice === 'scissors') {
-      return 'The computer won!';
+      return ' The computer won!';
     } else {
-      return 'You won!';
+      return ' You won!';
     }
 	} else if (userChoice === 'scissors') {
     if (computerChoice === 'rock') {
-      return 'The computer won!';
+      return ' The computer won!';
     } else {
-      return 'You won!';
+      return ' You won!';
     }
   } else if (userChoice === 'bomb') {
     	alert('BOOOOOOOOOOOOOM!!!');
   }
-}
+};
 
 let playGame = () => {
-  let userChoice = getUserChoice('bomb');
+  let userChoice = getUserChoice('');
   let computerChoice = getComputerChoice;
-  
-  console.log('You threw: ' + userChoice);
-  console.log('The computer threw: ' + computerChoice);
-  console.log(determineWinner(userChoice, computerChoice));
+  let answer = document.getElementById('answer');
+    
+  answer.innerHTML = `You threw: ${userChoice} || The computer threw: ${computerChoice} || ${determineWinner(userChoice, computerChoice)}`;
  
-}
+};
 
 playGame();
