@@ -57,6 +57,6 @@ const submitBtn = document.getElementById('get-value');
 submitBtn.addEventListener('click', function(e){
     e.preventDefault();
     
-    getEightBallDamian();
+    getEightBall();
 });
 
