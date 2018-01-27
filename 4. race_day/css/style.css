@@ -1,0 +1,39 @@
+body {
+    box-sizing: border-box;
+    background-color: #E4F1FE;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.app {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 50px;
+}
+h1 {
+    margin: 10px;
+}
+
+form {
+    margin-top: 1em; 
+    display: inline-block;
+}
+.row {
+    margin: 1em;
+}
+.label {
+    margin-right: 0.8em;
+}
+.input {
+    font-size: 0.8em;
+    padding: 1.1em;
+    border: none;
+    outline: none;
+    min-width: inherit;
+}
+
+.input-sub {
+    background-color: #446CB3;
+}
+.result {
+    margin: 40px;
+}

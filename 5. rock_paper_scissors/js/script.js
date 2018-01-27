@@ -61,4 +61,9 @@ let playGame = () => {
  
 };
 
-playGame();
+const btnGame = document.getElementById('btnGame');
+btnGame.addEventListener('click', function(e){
+    e.preventDefault();
+    
+    playGame();
+});

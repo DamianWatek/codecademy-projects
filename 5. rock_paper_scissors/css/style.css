@@ -4,6 +4,13 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
 }
+.btn {
+    margin: 15px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    background-color: #446CB3;
+}
 .app {
     text-align: center;
     font-size: 1.5em;
