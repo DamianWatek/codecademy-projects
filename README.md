@@ -1,5 +1,4 @@
 # codecademy-projects
-===
 
 Mini-projects and lessons from codecademy. Everywthing in JavaScript.
 ---
@@ -27,5 +26,4 @@ game.playMove(0, 1);
 game.playMove(1, 2);
 ```
 
-When done run '.exit'
----
+* When done run '.exit'
