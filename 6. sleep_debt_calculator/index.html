@@ -7,11 +7,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Damian Watroba" />
-    <script src="js/script.js"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-			
+    <div class="app">
+        <h1>Sleep debt caluculator</h1>
+        <form class="container">
+            <div class="column col-left">
+                <h2>How many hours do you sleep everyday?</h2>
+                <div class="row">
+                    <label class="label">Monday</label>
+                    <input class="input" type="number" id="sleepVal-1" placeholder="hour">
+                </div>
+                <div class="row">
+                    <label class="label">Tuesday</label>
+                    <input class="input" type="number" id="sleepVal-2" placeholder="hour">
+                </div>
+                <div class="row">
+                    <label class="label">Wednesday</label>
+                    <input class="input" type="number" id="sleepVal-3" placeholder="hour">
+                </div>
+                <div class="row">
+                    <label class="label">Thursday</label>
+                    <input class="input" type="number" id="sleepVal-4" placeholder="hour">
+                </div>
+                <div class="row">
+                    <label class="label">Friday</label>
+                    <input class="input" type="number" id="sleepVal-5" placeholder="hour">
+                </div>
+                <div class="row">
+                    <label class="label">Saturday</label>
+                    <input class="input" type="number" id="sleepVal-6" placeholder="hour">
+                </div>
+                <div class="row">
+                    <label class="label">Sunday</label>
+                    <input class="input" type="number" id="sleepVal-7" placeholder="hour">
+                </div>
+            </div>
+            <div class="column col-right">
+                <h2>What is the perfect amount of sleep during the day for you </h2>
+                <div class="row">
+                    <label class="label"></label>
+                    <input class="input" type="number" id="idealVal" placeholder="hour">
+                </div>
+            </div>
+        </form>
+        <input class="input input-sub" type="submit" id="get-value" value="submit" >
+        <div class="result" id="result"></div>
+    </div>
+<script src="js/script.js"></script>	
 </body>
+
 </html>

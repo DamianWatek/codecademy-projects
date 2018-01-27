@@ -1,0 +1,49 @@
+body {
+    box-sizing: border-box;
+    background-color: #E4F1FE;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+.app {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 50px;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 500px
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+.label {
+    margin-top: 15px;
+}
+.input {
+    font-size: 1em;
+    padding: 20px;
+    border: none;
+}
+.input-sub {
+    margin: 1em;
+    background-color: #446CB3;
+}
+.result {
+    margin: 40px;
+}
+
+h1 {
+    margin: 30px;
+}
+
