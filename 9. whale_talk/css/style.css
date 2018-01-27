@@ -1,0 +1,32 @@
+body {
+    box-sizing: border-box;
+    background-color: #E4F1FE;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.app {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 50px;
+}
+.input {
+    font-size: 1em;
+    padding: 20px;
+    border: none;
+}
+
+.input-sentence {
+    height: 200px;
+    width: 400px;
+    border-bottom: 1px solid #446CB3;
+}
+.btn {
+    padding: 1em;
+    margin: 1em;
+    border: none;
+    background-color: #446CB3;
+}
+.res {
+    margin: 40px;
+}
+

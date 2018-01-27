@@ -1,0 +1,25 @@
+body {
+    box-sizing: border-box;
+    background-color: #E4F1FE;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+h1 {
+    margin: 10px;
+}
+.btn {
+    margin: 1em;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: #446CB3;
+}
+.app {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 50px;
+}
+.res {
+    margin: 1em
+}
+

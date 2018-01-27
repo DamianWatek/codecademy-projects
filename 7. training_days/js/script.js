@@ -15,20 +15,22 @@ const getRandomEvent = () => {
 const getEventActivities = event => {
 	const allEvents = getAllEvents();
   
-  if (!allEvents.includes(event)) {
-    return null; 
-  }
-  let activities;
-  if (event === 'Marathon') {
-    activities = ['Running'];
-  } 
-  if (event === 'Triathlon') {
-    activities = ['Running', 'Cycling', 'Swimming'];
-  } 
-  if (event === 'Decathlon') {
-    activities = ['Running', 'Hurdles', 'Javelin throw', 'Discus Throw', 'Shot put', 'High Jump'];
-  }
-  return activities.join(', '); 
+    if (!allEvents.includes(event)) {
+        return null; 
+    }
+    
+    let activities;
+    if (event === 'Marathon') {
+        activities = ['Running'];
+    } 
+    if (event === 'Triathlon') {
+        activities = ['Running', 'Cycling', 'Swimming'];
+    } 
+    if (event === 'Decathlon') {
+        activities = ['Running', 'Hurdles', 'Javelin throw', 'Discus Throw', 'Shot put', 'High Jump'];
+    }
+    
+    return activities.join(', '); 
 
 };
 
@@ -45,8 +47,15 @@ const getDaysToTrain = event => {
 
 const getEventMessage = () => {
   const myEvent = getRandomEvent();
-  console.log('Your event is a ' + myEvent + '. Your event activities consist of ' + getEventActivities(myEvent) + '. You have ' + getDaysToTrain(myEvent) +  ' days to train.');
+    const result = document.getElementById('result');
+  result.innerHTML = 'Your event is a ' + myEvent + '. Your event activities consist of ' + getEventActivities(myEvent) + '. You have ' + getDaysToTrain(myEvent) +  ' days to train.';
 };
 
-getRandomEvent();
-getEventMessage();
+const randomEvent = document.getElementById('randomEvent');
+randomEvent.addEventListener('click', function(e){
+    e.preventDefault();
+    
+    getRandomEvent();
+    getEventMessage();
+});
+
