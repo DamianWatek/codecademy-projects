@@ -1,6 +1,6 @@
 # codecademy-projects
 
-Mini-projects and lessons from codecademy. Everywthing in JavaScript.
+Mini-projects and lessons from codecademy. Everything in JavaScript.
 ---
 
 1. Tasks from 1 to 9 - Mini applications, work in a web browser.
@@ -26,4 +26,4 @@ game.playMove(0, 1);
 game.playMove(1, 2);
 ```
 
-* When done run '.exit'
+* When done run `.exit`
