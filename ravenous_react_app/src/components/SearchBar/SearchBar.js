@@ -1,8 +1,6 @@
 import React from 'react';
 import './SearchBar.css';
 
-import Business from '../Business/Business';
-
 const sortByOptions = {
   'Best Match': 'best_match',
   'Highest Rated': 'rating',
